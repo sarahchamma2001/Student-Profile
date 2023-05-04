@@ -25,9 +25,8 @@ st.set_page_config(
 #st.set_page_config(layout="wide")
 
 #####################################
-
-# Get the path to the database file relative to the current file location
-db_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'OSB_Faculty_Database_F1.accdb')
+db_filename = "OSB_Faculty_Database_F1.accdb"
+db_path = os.path.join(os.getcwd(), db_filename)
 
 # Connect to the database using the Microsoft Access Driver and the relative file path
 conn = pyodbc.connect(r"Driver={{Microsoft Access Driver (*.mdb, *.accdb)}};DBQ={}".format(db_path))
