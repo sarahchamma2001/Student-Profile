@@ -25,7 +25,7 @@ st.set_page_config(
 
 #####################################
 
-conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\sarah\Desktop\New folder\OSB_Faculty_Database_F1.accdb')
+conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=OSB_Faculty_Database_F1.accdb')
 
 
 #####################################
