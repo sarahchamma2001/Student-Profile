@@ -26,7 +26,7 @@ st.set_page_config(
 
 #####################################
 # Connect to the database using the Microsoft Access Driver and the relative file path
-conn = pyodbc.connect(r"Driver={{Microsoft Access Driver (*.mdb, *.accdb)}};DBQ={}".format("OSB_Faculty_Database_F1.accdb"))
+conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=OSB_Faculty_Database_F1.accdb')
 #####################################
 a1, a2 = st.columns((10, 25))
 a1.image("AUB_Logo_OSB.png", width=230)
