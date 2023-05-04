@@ -14,7 +14,7 @@ import os.path
 from PIL import Image
 
 ##############################
-img = Image.open(r'''C:\Users\sarah\Desktop\New folder\logo.png''')
+img = Image.open(r'''logo.png''')
 st.set_page_config(
     page_title="OSB Graduate Program Profile",
     page_icon= img,
