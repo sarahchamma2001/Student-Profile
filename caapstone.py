@@ -10,6 +10,7 @@ from PIL import Image
 import numpy as np
 import pyodbc
 import math
+import os
 import os.path
 from PIL import Image
 
@@ -25,7 +26,11 @@ st.set_page_config(
 
 #####################################
 
-conn = pyodbc.connect(r"Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=/path/to/OSB_Faculty_Database_F1.accdb;")
+# Get the path to the database file relative to the current file location
+db_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'OSB_Faculty_Database_F1.accdb')
+
+# Connect to the database using the Microsoft Access Driver and the relative file path
+conn = pyodbc.connect(r"Driver={{Microsoft Access Driver (*.mdb, *.accdb)}};DBQ={}".format(db_path))
 
 
 
