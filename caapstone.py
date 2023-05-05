@@ -25,7 +25,7 @@ st.set_page_config(
 
 access_conn_str = (
     r"Driver={Microsoft Access Driver (*.mdb, *.accdb)};"
-    r"DBQ=https://github.com/sarahchamma2001/Student-Profile/main/OSB_Faculty_Database_F1.accdb;"
+    r"DBQ=https://raw.githubusercontent.com/sarahchamma2001/Student-Profile/main/OSB_Faculty_Database_F1.accdb;"
 )
 
 conn = pyodbc.connect(access_conn_str)
