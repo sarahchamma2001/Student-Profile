@@ -28,28 +28,12 @@ st.set_page_config(
 import os
 import pyodbc
 
-# Set the file path to your Access database
-db_filename = "OSB_Faculty_Database_F1.accdb"
-db_path = os.path.join(os.getcwd(), db_filename)
+access_conn_str = (
+    r"Driver={Microsoft Access Driver (*.mdb, *.accdb)};"
+    r"DBQ=https://github.com/sarahchamma2001/Student-Profile/main/OSB_Faculty_Database_F1.accdb;"
+)
 
-# Set the ODBC driver and connection string
-driver = 'Driver={Microsoft Access Driver (*.mdb, *.accdb)}'
-connection_string = 'DBQ={};'.format(db_path)
-
-# Replace the Microsoft Access Driver with the Microsoft Access Database Engine
-driver = 'Driver={Microsoft Access Driver (*.mdb, *.accdb)};'
-if os.path.exists('/usr/lib/libodbc.so'):
-    driver = 'Driver=ODBC Driver 17 for SQL Server;'
-
-# Create the connection
-conn = pyodbc.connect(driver + connection_string)
-
-# Use the connection to query the database
-cursor = conn.cursor()
-cursor.execute('SELECT * FROM Student')
-for row in cursor.fetchall():
-    print(row)
-
+conn = pyodbc.connect(access_conn_str)
 #####################################
 a1, a2 = st.columns((10, 25))
 a1.image("AUB_Logo_OSB.png", width=230)
