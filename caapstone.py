@@ -11,7 +11,6 @@ import numpy as np
 import pyodbc
 import math
 import os.path
-import os
 from PIL import Image
 
 ##############################
@@ -23,10 +22,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 #st.set_page_config(layout="wide")
-
-#####################################
-import os
-import pyodbc
 
 access_conn_str = (
     r"Driver={Microsoft Access Driver (*.mdb, *.accdb)};"
